@@ -47,11 +47,11 @@ class Order extends CI_Model {
         }
     }
     
-    public function receipt($number) {
+    public function receipt() {
         $total = 0;
         $result = $this->data['pagetitle'] . '  ' . PHP_EOL;
         $result .= date(DATE_ATOM) . PHP_EOL;
-        $result .= PHP_EOL . 'Your Order: '. $number . PHP_EOL . PHP_EOL;
+        $result .= PHP_EOL . 'Your Order: ' . PHP_EOL . PHP_EOL;
         //$result .= PHP_EOL . $number . PHP_EOL . PHP_EOL;
         foreach($this->items as $key => $value) {
             $menu = $this->menu->get($key);
